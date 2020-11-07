@@ -55,7 +55,7 @@ var budgetController = (function() {
       // 2. Calculate the total budget__title
       data.budget = data.totals.inc - data.totals.exp;
       //3. Calculate the total percentage of expenditure
-      data.percentage = Math.round((data.totals.exp / data.totals.inc) * 100);
+      data.percentage = data.totals.inc > 0 ? Math.round((data.totals.exp / data.totals.inc) * 100) : -1;
 
 
     },
